@@ -8,7 +8,7 @@ WORKDIR /app
 COPY target/SeleniumCheckJen-0.0.1-SNAPSHOT.jar app.jar
 
 # Expose the port the application runs on
-EXPOSE 8080
+EXPOSE 8081
 
 # Run the JAR file
 ENTRYPOINT ["java", "-jar", "app.jar"]
