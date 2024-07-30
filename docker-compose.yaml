@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  app:
+    image: reactsel_img
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "1002:1002"
+    depends_on:
+      - db
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/test_db
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: Admin@123
+
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: Admin@123
+      MYSQL_DATABASE: test_db
+    ports:
+      - "3306:3306"
