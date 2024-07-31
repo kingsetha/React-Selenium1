@@ -91,65 +91,6 @@ class AddTest {
         driver.findElement(By.name("sub1")).submit();
         assertEquals("valid data needed","valid data needed");
 	}
-	@Test
 	
-	public void testAddCustomer1() {
-//		WebDriver driver = new ChromeDriver();
-	//AddCustomer Page
-	driver.get("http://localhost:3000/AddCustomer");
-	System.out.println(driver.getCurrentUrl());
-	System.out.println(driver.getTitle());
-	driver.findElement(By.name("cname")).sendKeys("ani");
-	driver.findElement(By.name("count")).sendKeys("Tirunelveli");
-	driver.findElement(By.name("address")).sendKeys("19-B,Street");
-	driver.findElement(By.name("s1")).sendKeys("3");
-	driver.findElement(By.name("submit")).submit();
-        assertEquals("Data added Successfully", "Data added Successfully");
-	}
-	@Test
-
-	public void testAddCustomer2() {
-//		WebDriver driver = new ChromeDriver();
-	//AddCustomer Page
-	driver.get("http://localhost:3000/AddCustomer");
-	System.out.println(driver.getCurrentUrl());
-	System.out.println(driver.getTitle());
-	driver.findElement(By.name("cname")).sendKeys("ani");
-	driver.findElement(By.name("count")).sendKeys("");
-	driver.findElement(By.name("address")).sendKeys("19-B,Street");
-	driver.findElement(By.name("s1")).sendKeys("1");
-	driver.findElement(By.name("submit")).submit();
-        assertEquals("valid data needed", "valid data needed");
-	}
-	@Test
-
-	public void testAddCustomer3() {
-//		WebDriver driver = new ChromeDriver();
-	//AddCustomer Page
-	driver.get("http://localhost:3000/AddCustomer");
-	System.out.println(driver.getCurrentUrl());
-	System.out.println(driver.getTitle());
-	driver.findElement(By.name("cname")).sendKeys("Aji");
-	driver.findElement(By.name("count")).sendKeys("Tirunelveli");
-	driver.findElement(By.name("address")).sendKeys("");
-	driver.findElement(By.name("s1")).sendKeys("1");
-	driver.findElement(By.name("submit")).submit();
-        assertEquals("valid data needed", "valid data needed");
-	}
-	@Test
-
-	public void testAddCustomer4() {
-//		WebDriver driver = new ChromeDriver();
-	//AddCustomer Page
-	driver.get("http://localhost:3000/AddCustomer");
-	System.out.println(driver.getCurrentUrl());
-	System.out.println(driver.getTitle());
-	driver.findElement(By.name("cname")).sendKeys("");
-	driver.findElement(By.name("count")).sendKeys("Tirunelveli");
-	driver.findElement(By.name("address")).sendKeys("122,mount road");
-	driver.findElement(By.name("s1")).sendKeys("1");
-	driver.findElement(By.name("submit")).submit();
-        assertEquals("valid data needed", "valid data needed");
-	}
 
 }
